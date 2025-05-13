@@ -2,3 +2,8 @@
 body{ 
     font-family: "Inter", sans-serif;
  }
+
+ .error-feedback{
+  color: #d32f2f;
+  position: relative;
+ }
