@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, ReactiveFormsModule, ValidatorFn, Validators } from '@angular/forms';
 import { FirstKeyPipe } from '../../shared/pipes/first-key.pipe';
 import { AuthService } from '../../shared/services/auth.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
-  imports: [ReactiveFormsModule, CommonModule, FirstKeyPipe],
+  imports: [ReactiveFormsModule, CommonModule, FirstKeyPipe, RouterLink],
   templateUrl: './registration.component.html',
   styleUrl: './registration.component.css'
 })

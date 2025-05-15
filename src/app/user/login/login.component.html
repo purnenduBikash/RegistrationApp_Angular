@@ -1,1 +1,24 @@
-<p>login works!</p>
+<form [formGroup]="form">
+    <div class="mb-4 h2 text-success">
+        Sign In
+    </div>
+    <div class="text-decoration-none fw-medium d-inlin-block">
+        Don't have an account?
+        <a routerLink="/user/signup" class="text-decoration-none fw-medium text-success d-inlin-block">Sign Up</a>
+    </div>
+    <div class="mb-3">
+        <input class="form-control bg-body-secondary" placeholder="Email" formControlName="email">
+        <!-- <div class="error-feedback" *ngIf = "hasDisplaybleError('fullName') && form.controls.fullName.hasError('required')">
+        Please enter your full Name
+        </div> -->
+    </div>
+    <div class="mb-3">
+        <input class="form-control bg-body-secondary" placeholder="Password" formControlName="password">
+        <!-- <div class="error-feedback" *ngIf = "hasDisplaybleError('fullName') && form.controls.fullName.hasError('required')">
+        Please enter your full Name
+        </div> -->
+    </div>
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success w-100 rounded-3">Sign In</button>
+    </div>
+</form>
