@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="mb-4 h2 text-success">
         Sign In
     </div>
@@ -8,15 +8,15 @@
     </div>
     <div class="mb-3">
         <input class="form-control bg-body-secondary" placeholder="Email" formControlName="email">
-        <!-- <div class="error-feedback" *ngIf = "hasDisplaybleError('fullName') && form.controls.fullName.hasError('required')">
-        Please enter your full Name
-        </div> -->
+        <div class="error-feedback" *ngIf = "hasDisplaybleError('email') && form.controls.email.hasError('required')">
+        Please enter your Email
+        </div>
     </div>
     <div class="mb-3">
         <input class="form-control bg-body-secondary" placeholder="Password" formControlName="password">
-        <!-- <div class="error-feedback" *ngIf = "hasDisplaybleError('fullName') && form.controls.fullName.hasError('required')">
-        Please enter your full Name
-        </div> -->
+        <div class="error-feedback" *ngIf = "hasDisplaybleError('password') && form.controls.password.hasError('required')">
+        Please enter your Password
+        </div>
     </div>
     <div class="mt-4">
         <button type="submit" class="btn btn-success w-100 rounded-3">Sign In</button>
