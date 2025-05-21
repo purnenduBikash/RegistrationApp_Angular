@@ -36,7 +36,7 @@ export class LoginComponent {
         },
         error:err => {
           if(err.status == 400){
-            this.error =("Login Failed")
+            this.error =("Login Failed. Wrong email or password")
             console.log(this.error)
           }
         }
